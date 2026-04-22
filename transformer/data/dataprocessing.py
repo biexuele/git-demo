@@ -1,3 +1,4 @@
+import torch
 from torch.utils.data import Dataset, random_split
 import json
 
@@ -29,4 +30,7 @@ class TRANS(Dataset):
 
 data = TRANS('data/translation2019zh/translation2019zh_train.json')
 train_data, valid_data = random_split(data, [train_set_size, valid_set_size])
+
+
+
 test_data = TRANS('data/translation2019zh/translation2019zh_valid.json')
